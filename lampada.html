@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Lampada</title>
+	<meta charset="utf-8">
+</head>
+<body>
+	<script>
+		var quebrada = false
+		function mudaLampada(tipo){
+			if (tipo ==1){
+				arquivo = "img/lampadaacesa.jpg";
+			}
+			if (tipo ==2) {
+				arquivo = "img/lampadaapagada.jpg";
+			}
+			if (tipo ==3) {
+				arquivo = "img/lampadaquebrada.jpg";
+			}
+			if (!quebrada){
+			document.getElementById("luz").src= arquivo;
+			if (tipo ==3){
+				quebrada= true;
+			}
+		}
+
+		}
+	</script>
+	<h1> acenda a Lampada <h1>
+	<img src="img/lampadaapagada.jpg" id="luz" onmousemove="mudaLampada(1)" onmouseout="mudaLampada(2)" onclick="mudaLampada(3)">
+
+</body>
+</html>
